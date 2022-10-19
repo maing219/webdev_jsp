@@ -21,7 +21,7 @@
 						<li class="nav-item"><a
 							href='<c:url value="/member/logoutMember.jsp"/>' class="nav-link">로그아웃</a></li>
 						<li class="nav-item"><a
-							href='<c:url value="/member/updaeMember.jsp"/>' class="nav-link">회원수정</a></li>
+							href='<c:url value="/member/updateMember.jsp"/>' class="nav-link">회원수정</a></li>
 					</c:otherwise>
 				</c:choose>
 				<li class="nav-item"><a href='<c:url value="/products.jsp"/>' class="nav-link">상품

@@ -1,5 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
 <!DOCTYPE html>
 <html>
 <head>
@@ -87,9 +88,10 @@
 					<div class="form-group row">
 						<label class="col-sm-2">상태</label>
 						<div class="col-sm-5">
-							<input type="radio" name="condition" value="New">신규 제품 <input
-								type="radio" name="condition" value="Old">중고 제품 <input
-								type="radio" name="condition" value="Refurbished">재생 제품
+							<c:set var="condition" value='<%= rs.getString("p_condition") %>' />
+							<input type="radio" name="condition" value="New" <c:if test="${ condition.equals('new') }">checked</c:if>>신규 제품
+							<input type="radio" name="condition" value="Old" <c:if test="${ condition.equals('old') }">checked</c:if>>중고 제품
+							<input type="radio" name="condition" value="Refurbished" <c:if test="${ condition.equals('refurbished') }">checked</c:if>>재생 제품
 						</div>
 					</div>
 					<div class="form-group row">
