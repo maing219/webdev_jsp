@@ -17,21 +17,26 @@
 							href='<c:url value="/member/addMember.jsp"/>' class="nav-link">회원가입</a></li>
 					</c:when>
 					<c:otherwise>
-					<li style="padding-top: 7px; color: white;">[${ sessionId }]님</li>
+						<li style="padding-top: 7px; color: white;">[${ sessionId }]님</li>
 						<li class="nav-item"><a
 							href='<c:url value="/member/logoutMember.jsp"/>' class="nav-link">로그아웃</a></li>
 						<li class="nav-item"><a
 							href='<c:url value="/member/updateMember.jsp"/>' class="nav-link">회원수정</a></li>
 					</c:otherwise>
 				</c:choose>
-				<li class="nav-item"><a href='<c:url value="/products.jsp"/>' class="nav-link">상품
-						목록</a></li>
+				<li class="nav-item"><a href='<c:url value="/products.jsp"/>'
+					class="nav-link">상품 목록</a></li>
 				<li class="nav-item"><a href='<c:url value="/addProduct.jsp"/>'
 					class="nav-link">상품 등록</a></li>
-				<li class="nav-item"><a href='<c:url value="/editProduct.jsp?edit=update"/>'
+				<li class="nav-item"><a
+					href='<c:url value="/editProduct.jsp?edit=update"/>'
 					class="nav-link">상품 수정</a></li>
-				<li class="nav-item"><a href='<c:url value="/editProduct.jsp?edit=delete"/>'
+				<li class="nav-item"><a
+					href='<c:url value="/editProduct.jsp?edit=delete"/>'
 					class="nav-link">상품 삭제</a></li>
+				<li class="nav-item"><a
+					href='<c:url value="/BoardListAction.do?pageNum=1"/>'
+					class="nav-link">게시판</a></li>
 			</ul>
 		</div>
 	</div>
