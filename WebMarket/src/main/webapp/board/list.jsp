@@ -54,14 +54,17 @@ int total_page = ((Integer) request.getAttribute("total_page")).intValue();
 					for (int i = 0; i < boardList.size(); i++) {
 						BoardDTO notice = (BoardDTO) boardList.get(i);
 					%>
-					<tr>
-						<td><%=notice.getNum()%></td>
-						<td><a
-							href="./BoardViewAction.do?num=<%=notice.getNum()%>&pageNum=<%=pageNum%>"><%=notice.getSubject()%></a></td>
-						<td><%=notice.getRegist_day()%></td>
-						<td><%=notice.getHit()%></td>
-						<td><%=notice.getId()%></td>
-					</tr>
+					<c:forEach var="i" begin="0" end="${ boardlist.size() }">
+						<c:set var="notice" value="${ boardlist.get(i) }"/>
+						<tr>
+							<td>${ notice.num }</td>
+							<td><a
+								href="./BoardViewAction.do?num=<%=notice.getNum()%>&pageNum=<%=pageNum%>"><%=notice.getSubject()%></a></td>
+							<td><%=notice.getRegist_day()%></td>
+							<td><%=notice.getHit()%></td>
+							<td><%=notice.getId()%></td>
+						</tr>
+					</c:forEach>
 					<%
 					}
 					%>

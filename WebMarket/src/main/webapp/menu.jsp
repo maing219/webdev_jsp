@@ -37,6 +37,12 @@
 				<li class="nav-item"><a
 					href='<c:url value="/BoardListAction.do?pageNum=1"/>'
 					class="nav-link">게시판</a></li>
+				<c:choose>
+					<c:when test="${ sessionId.equals('admin') }">
+						<li class="nav-item"><a
+							href='<c:url value="/MemberListAction.member"/>' class="nav-link">회원관리</a></li>
+					</c:when>
+				</c:choose>
 			</ul>
 		</div>
 	</div>

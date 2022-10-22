@@ -159,9 +159,6 @@
 		</div>
 	</c:forEach>
 	<script>
-		$(function() {
-			
-		});
 		function init() {
 			setComboMailValue("${ mail2 }");
 			setComboBirthValue("${ month }");
